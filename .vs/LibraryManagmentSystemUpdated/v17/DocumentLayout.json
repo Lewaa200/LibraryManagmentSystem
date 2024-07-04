@@ -1,0 +1,224 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|c:\\users\\tmt\\source\\repos\\librarymanagmentsystemupdated\\libapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|solutionrelative:libapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|c:\\users\\tmt\\source\\repos\\librarymanagmentsystemupdated\\libapi\\iloggermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|solutionrelative:libapi\\iloggermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|c:\\users\\tmt\\source\\repos\\librarymanagmentsystemupdated\\libapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|solutionrelative:libapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|c:\\users\\tmt\\source\\repos\\librarymanagmentsystemupdated\\libapi\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|solutionrelative:libapi\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|c:\\users\\tmt\\source\\repos\\librarymanagmentsystemupdated\\libapi\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|solutionrelative:libapi\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|c:\\users\\tmt\\source\\repos\\librarymanagmentsystemupdated\\libapi\\libapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|solutionrelative:libapi\\libapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{057DE4E4-CCBF-4AA0-A102-B12E79B5B16D}|Data\\Data.csproj|c:\\users\\tmt\\source\\repos\\librarymanagmentsystemupdated\\data\\models\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{057DE4E4-CCBF-4AA0-A102-B12E79B5B16D}|Data\\Data.csproj|solutionrelative:data\\models\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|c:\\users\\tmt\\source\\repos\\librarymanagmentsystemupdated\\libapi\\controllers\\addresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|solutionrelative:libapi\\controllers\\addresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|c:\\users\\tmt\\source\\repos\\librarymanagmentsystemupdated\\libapi\\services\\addressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F33FEB8-33E7-4A53-AF1F-7D940B8B3DDF}|LIBAPI\\LIBAPI.csproj|solutionrelative:libapi\\services\\addressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{057DE4E4-CCBF-4AA0-A102-B12E79B5B16D}|Data\\Data.csproj|c:\\users\\tmt\\source\\repos\\librarymanagmentsystemupdated\\data\\repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{057DE4E4-CCBF-4AA0-A102-B12E79B5B16D}|Data\\Data.csproj|solutionrelative:data\\repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{057DE4E4-CCBF-4AA0-A102-B12E79B5B16D}|Data\\Data.csproj|c:\\users\\tmt\\source\\repos\\librarymanagmentsystemupdated\\data\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{057DE4E4-CCBF-4AA0-A102-B12E79B5B16D}|Data\\Data.csproj|solutionrelative:data\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{057DE4E4-CCBF-4AA0-A102-B12E79B5B16D}|Data\\Data.csproj|c:\\users\\tmt\\source\\repos\\librarymanagmentsystemupdated\\data\\migrations\\mydbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{057DE4E4-CCBF-4AA0-A102-B12E79B5B16D}|Data\\Data.csproj|solutionrelative:data\\migrations\\mydbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 274,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\Program.cs",
+              "RelativeDocumentMoniker": "LIBAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\Program.cs",
+              "RelativeToolTip": "LIBAPI\\Program.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAADsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T10:40:07.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ILoggerManager.cs",
+              "DocumentMoniker": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\ILoggerManager.cs",
+              "RelativeDocumentMoniker": "LIBAPI\\ILoggerManager.cs",
+              "ToolTip": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\ILoggerManager.cs",
+              "RelativeToolTip": "LIBAPI\\ILoggerManager.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA2wCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T06:23:26.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "LIBAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\appsettings.json",
+              "RelativeToolTip": "LIBAPI\\appsettings.json",
+              "ViewState": "AQIAAAUAAAAAAAAAAADwvyEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-03T13:33:04.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "LIBAPI\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\Controllers\\BookController.cs",
+              "RelativeToolTip": "LIBAPI\\Controllers\\BookController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T06:27:39.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "LIBAPI\\ExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "LIBAPI\\ExceptionMiddleware.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwDcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T06:24:07.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MyDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\Data\\Models\\MyDBContext.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\MyDBContext.cs",
+              "ToolTip": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\Data\\Models\\MyDBContext.cs",
+              "RelativeToolTip": "Data\\Models\\MyDBContext.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAADwvxYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T13:29:47.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LIBAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\LIBAPI.csproj",
+              "RelativeDocumentMoniker": "LIBAPI\\LIBAPI.csproj",
+              "ToolTip": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\LIBAPI.csproj",
+              "RelativeToolTip": "LIBAPI\\LIBAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-01T10:37:33.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddressController.cs",
+              "DocumentMoniker": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\Controllers\\AddressController.cs",
+              "RelativeDocumentMoniker": "LIBAPI\\Controllers\\AddressController.cs",
+              "ToolTip": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\Controllers\\AddressController.cs",
+              "RelativeToolTip": "LIBAPI\\Controllers\\AddressController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T14:10:08.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddressService.cs",
+              "DocumentMoniker": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\Services\\AddressService.cs",
+              "RelativeDocumentMoniker": "LIBAPI\\Services\\AddressService.cs",
+              "ToolTip": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\LIBAPI\\Services\\AddressService.cs",
+              "RelativeToolTip": "LIBAPI\\Services\\AddressService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T14:10:03.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\Data\\Repository\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repository\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\Data\\Repository\\IGenericRepository.cs",
+              "RelativeToolTip": "Data\\Repository\\IGenericRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T14:03:37.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\Data\\Repository\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repository\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\Data\\Repository\\GenericRepository.cs",
+              "RelativeToolTip": "Data\\Repository\\GenericRepository.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAmwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T14:03:33.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MyDBContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\Data\\Migrations\\MyDBContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Data\\Migrations\\MyDBContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\TMT\\source\\repos\\LibraryManagmentSystemUpdated\\Data\\Migrations\\MyDBContextModelSnapshot.cs",
+              "RelativeToolTip": "Data\\Migrations\\MyDBContextModelSnapshot.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T13:25:19.751Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

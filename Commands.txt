@@ -1,0 +1,5 @@
+add-migration initialmigiration -c MyDBContext -s LIBAPI
+
+PM> Update-Database -Migration initialmigration -Context ApplicationDbContext -StartupProject DigitalRecordingBackend
+
+add-migration initialmigiration -c ApplicationDbContext -s DigitalRecordingSystemData
