@@ -105,8 +105,10 @@ C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\LIBAPI\obj\Debug\net8.0\
 C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\LIBAPI\obj\Debug\net8.0\LIBAPI.pdb
 C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\LIBAPI\obj\Debug\net8.0\LIBAPI.genruntimeconfig.cache
 C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\LIBAPI\obj\Debug\net8.0\ref\LIBAPI.dll
-C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\LIBAPI\bin\Debug\net8.0\NLog.config
 C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\LIBAPI\bin\Debug\net8.0\NLog.dll
 C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\LIBAPI\bin\Debug\net8.0\NLog.Extensions.Logging.dll
 C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\LIBAPI\bin\Debug\net8.0\NLog.Web.AspNetCore.dll
 C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\LIBAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\LIBAPI\obj\Debug\net8.0\LIBAPI.sourcelink.json
+C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\LIBAPI\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\LIBAPI\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

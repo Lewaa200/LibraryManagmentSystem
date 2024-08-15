@@ -12,3 +12,4 @@ C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\Data\obj\Debug\net8.0\re
 C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\Data\obj\Debug\net8.0\Data.pdb
 C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\Data\obj\Debug\net8.0\Data.genruntimeconfig.cache
 C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\Data\obj\Debug\net8.0\ref\Data.dll
+C:\Users\TMT\source\repos\LibraryManagmentSystemUpdated\Data\obj\Debug\net8.0\Data.sourcelink.json

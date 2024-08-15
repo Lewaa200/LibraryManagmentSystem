@@ -12,65 +12,75 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using LIBAPI;
+using Microsoft.AspNetCore.Hosting;
+using AutoMapper;
+using LIBAPI.MappingProfiles;
 
-var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
-try
+internal class Program
 {
-    logger.Debug("init main");
-    var builder = WebApplication.CreateBuilder(args);
-
-    // Add services to the container.
-    builder.Services.AddControllers();
-    builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen(c =>
+    private static void Main(string[] args)
     {
-        c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
-    });
+        var nlogger = LogManager.GetCurrentClassLogger();
 
-    builder.Services.AddDbContext<MyDBContext>(options =>
-        options.UseNpgsql(builder.Configuration.GetConnectionString("DBCS")));
+        try
+        {
+            nlogger.Debug("init main");
+            var builder = WebApplication.CreateBuilder(args);
+            builder.Host.UseNLog();
+            // Add services to the container.
+            builder.Services.AddControllers();
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
+            });
 
-    // Register repositories
-    builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            builder.Services.AddDbContext<MyDBContext>(options =>
+                options.UseNpgsql(builder.Configuration.GetConnectionString("DBCS")));
 
-    // Register services
-    builder.Services.AddScoped<IAuthorService, AuthorService>();
-    builder.Services.AddScoped<IAddressService, AddressService>();
-    builder.Services.AddScoped<IBookCategoryService, BookCategoryService>();
-    builder.Services.AddScoped<IBookService, BookService>();
-    builder.Services.AddScoped<ICategoryService, CategoryService>();
+            // Register repositories
+            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
-    // Register Logger
-    builder.Services.AddSingleton<ILoggerManager, LoggerManager>();
+            // Register services
+            builder.Services.AddScoped<IAuthorService, AuthorService>();
+            builder.Services.AddScoped<IAddressService, AddressService>();
+            builder.Services.AddScoped<IBookCategoryService, BookCategoryService>();
+            builder.Services.AddScoped<IBookService, BookService>();
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
 
-    var app = builder.Build();
+            // Register Logger
+            builder.Services.AddSingleton<ILoggerManager, LoggerManager>();
 
-    // Configure the HTTP request pipeline.
-    if (app.Environment.IsDevelopment())
-    {
-        app.UseSwagger();
-        app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
+            }
+
+            app.UseHttpsRedirection();
+
+            app.UseAuthorization();
+
+            // Add the middleware here
+            app.UseMiddleware<ExceptionMiddleware>();
+
+            app.MapControllers();
+
+            app.Run();
+        }
+        catch (Exception ex)
+        {
+            nlogger.Error($"Exception in program.cs file. Error: {ex.Message}. Stacktrace: {ex.StackTrace}");
+            throw;
+        }
+        finally
+        {
+            // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
+            LogManager.Shutdown();
+        }
+
+          }
     }
-
-    app.UseHttpsRedirection();
-
-    app.UseAuthorization();
-
-    // Add the middleware here
-    app.UseMiddleware<ExceptionMiddleware>();
-
-    app.MapControllers();
-
-    app.Run();
-}
-catch (Exception ex)
-{
-    // NLog: catch setup errors
-    logger.Error(ex, "Stopped program because of exception");
-    throw;
-}
-finally
-{
-    // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
-    LogManager.Shutdown();
-}

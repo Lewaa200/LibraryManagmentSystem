@@ -1,10 +1,10 @@
 ﻿using Data.Models;
+using Data.Utilities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Data.Repository
@@ -23,7 +23,6 @@ namespace Data.Repository
         public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _dbSet.ToListAsync();
-
         }
 
         public async Task<T> GetByIdAsync(int id)
@@ -58,7 +57,20 @@ namespace Data.Repository
         {
             return await _dbSet.Where(predicate).ToListAsync();
         }
-    }
 
-   
+        public async Task<PaginatedList<T>> GetPaginatedListAsync(int pageIndex, int pageSize)
+        {
+            var query = _dbSet.AsQueryable();
+            return await PaginatedList<T>.CreateAsync(query, pageIndex, pageSize);
+        }
+
+        public async Task<PaginatedList<T>> GetPaginatedListAsync(
+           int pageIndex, int pageSize, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy)
+        {
+            var query = _dbSet.AsQueryable();
+            query = orderBy(query);
+            return await PaginatedList<T>.CreateAsync(query, pageIndex, pageSize);
+        }
+
+    }
 }

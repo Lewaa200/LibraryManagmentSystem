@@ -1,12 +1,15 @@
 ﻿using System.Net;
 using Data.Repository;
 using Data.Models;
+using Data.Utilities;
 
 namespace LIBAPI.Services
 {
     public interface IBookService
     {
         Task<IEnumerable<Book>> GetAllBooksAsync();
+        Task<PaginatedList<Book>> GetBooksAsync(int pageIndex, int pageSize, string sortOrder);
+
         Task<Book> GetBookByIdAsync(int id);
         Task AddBookAsync(Book book);
         Task UpdateBookAsync(Book book);

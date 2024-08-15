@@ -1,4 +1,7 @@
 ﻿using Data.Models;
+using Data.Utilities;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace LIBAPI.Services
 {
@@ -34,6 +37,24 @@ namespace LIBAPI.Services
         public async Task DeleteBookAsync(int id)
         {
             await _bookRepository.DeleteAsync(id);
+        }
+
+        public async Task<PaginatedList<Book>> GetBooksAsync(int pageIndex, int pageSize, string sortOrder)
+        {
+            var query = await _bookRepository.GetAllAsync();
+
+            switch (sortOrder)
+            {
+                case "title_desc":
+                    query = query.OrderByDescending(b => b.Title);
+                    break;
+                case "title_asc":
+                default:
+                    query = query.OrderBy(b => b.Title);
+                    break;
+            }
+
+            return await PaginatedList<Book>.CreateAsync(query.AsQueryable(), pageIndex, pageSize);
         }
     }
 }

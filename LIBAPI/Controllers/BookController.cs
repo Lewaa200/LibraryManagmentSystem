@@ -1,9 +1,10 @@
 ﻿using LIBAPI.Services;
+using AutoMapper;
 using Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
+using Data.Utilities;
 
 namespace API.Controllers
 {
@@ -11,12 +12,13 @@ namespace API.Controllers
     [ApiController]
     public class BookController : ControllerBase
     {
-
         private readonly IBookService _bookService;
+        private readonly IMapper _mapper;
 
-        public BookController(IBookService bookService)
+        public BookController(IBookService bookService, IMapper mapper)
         {
             _bookService = bookService;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -32,7 +34,7 @@ namespace API.Controllers
             var book = await _bookService.GetBookByIdAsync(id);
             if (book == null)
             {
-                return BadRequest();
+                return NotFound();
             }
             return Ok(book);
         }
@@ -40,9 +42,22 @@ namespace API.Controllers
         [HttpPost]
         public async Task<ActionResult<Book>> PostBook(Book book)
         {
-            await _bookService.AddBookAsync(book);
-            return CreatedAtAction(nameof(GetBook), new { id = book.ID }, book);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                await _bookService.AddBookAsync(book);
+                return CreatedAtAction(nameof(GetBook), new { id = book.ID }, book);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> PutBook(int id, Book book)
         {
@@ -55,13 +70,17 @@ namespace API.Controllers
         }
 
         [HttpDelete("{id}")]
-
-        public async Task<IActionResult> DeleteCategory(int id)
+        public async Task<IActionResult> DeleteBook(int id)
         {
             await _bookService.DeleteBookAsync(id);
             return NoContent();
         }
 
-
+        [HttpGet("paginated")]
+        public async Task<ActionResult<PaginatedList<Book>>> GetBooksPaginated(int pageIndex = 1, int pageSize = 10, string sortOrder = "title_asc")
+        {
+            var paginatedBooks = await _bookService.GetBooksAsync(pageIndex, pageSize, sortOrder);
+            return Ok(paginatedBooks);
+        }
     }
 }

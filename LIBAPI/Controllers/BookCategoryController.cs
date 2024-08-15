@@ -1,6 +1,11 @@
 ﻿using LIBAPI.Services;
+using AutoMapper;
 using Data.Models;
+using LIBAPI.DTOs;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 
 namespace API.Controllers
 {
@@ -9,21 +14,24 @@ namespace API.Controllers
     public class BookCategoriesController : ControllerBase
     {
         private readonly IBookCategoryService _bookCategoryService;
+        private readonly IMapper _mapper;
 
-        public BookCategoriesController(IBookCategoryService bookCategoryService)
+        public BookCategoriesController(IBookCategoryService bookCategoryService, IMapper mapper)
         {
             _bookCategoryService = bookCategoryService;
+            _mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BookCategory>>> GetBookCategories()
+        public async Task<ActionResult<IEnumerable<BookCategoryDTO>>> GetBookCategories()
         {
             var bookCategories = await _bookCategoryService.GetAllBookCategoriesAsync();
-            return Ok(bookCategories);
+            var bookCategoryDTOs = _mapper.Map<IEnumerable<BookCategoryDTO>>(bookCategories);
+            return Ok(bookCategoryDTOs);
         }
 
         [HttpGet("{bookId}/{categoryId}")]
-        public async Task<ActionResult<BookCategory>> GetBookCategory(int bookId, int categoryId)
+        public async Task<ActionResult<BookCategoryDTO>> GetBookCategory(int bookId, int categoryId)
         {
             var bookCategory = await _bookCategoryService.GetBookCategoryByIdAsync(bookId, categoryId);
             if (bookCategory == null)
@@ -31,24 +39,29 @@ namespace API.Controllers
                 return NotFound();
             }
 
-            return Ok(bookCategory);
+            var bookCategoryDTO = _mapper.Map<BookCategoryDTO>(bookCategory);
+            return Ok(bookCategoryDTO);
         }
 
         [HttpPost]
-        public async Task<ActionResult<BookCategory>> PostBookCategory(BookCategory bookCategory)
+        public async Task<ActionResult<BookCategoryDTO>> PostBookCategory(BookCategoryDTO bookCategoryDTO)
         {
+            var bookCategory = _mapper.Map<BookCategory>(bookCategoryDTO);
             await _bookCategoryService.AddBookCategoryAsync(bookCategory);
-            return CreatedAtAction(nameof(GetBookCategory), new { bookId = bookCategory.BookId, categoryId = bookCategory.CategoryId }, bookCategory);
+
+            var createdBookCategoryDTO = _mapper.Map<BookCategoryDTO>(bookCategory);
+            return CreatedAtAction(nameof(GetBookCategory), new { bookId = createdBookCategoryDTO.BookId, categoryId = createdBookCategoryDTO.CategoryId }, createdBookCategoryDTO);
         }
 
         [HttpPut("{bookId}/{categoryId}")]
-        public async Task<IActionResult> PutBookCategory(int bookId, int categoryId, BookCategory bookCategory)
+        public async Task<IActionResult> PutBookCategory(int bookId, int categoryId, BookCategoryDTO bookCategoryDTO)
         {
-            if (bookId != bookCategory.BookId || categoryId != bookCategory.CategoryId)
+            if (bookId != bookCategoryDTO.BookId || categoryId != bookCategoryDTO.CategoryId)
             {
                 return BadRequest();
             }
 
+            var bookCategory = _mapper.Map<BookCategory>(bookCategoryDTO);
             await _bookCategoryService.UpdateBookCategoryAsync(bookCategory);
             return NoContent();
         }
